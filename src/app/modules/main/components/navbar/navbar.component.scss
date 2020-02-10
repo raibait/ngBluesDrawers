@@ -1,0 +1,21 @@
+.navbar {
+  padding: 20px 10px;
+  
+    .navbar-list {
+      display: flex;
+      justify-content: space-around;
+
+      &__item {
+        text-transform: uppercase;
+
+        & :hover,
+        &--active {
+          font-weight: bold;
+        }
+  
+        &--active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
