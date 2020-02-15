@@ -1,0 +1,66 @@
+.team {
+  height: calc(100vh - 56px);
+
+  .title {
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .member-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: calc(100% - 32px);
+    padding: 20px;
+  }
+
+  .member {
+    width: 45%;
+    height: 40%;
+    display: flex;
+
+    &--right {
+      align-self: flex-end;
+      text-align: right;
+    }
+
+    &__img {
+      height: 200px;
+      width: 200px;
+      min-width: 200px;
+
+      &--right {
+        margin-left: 10px;
+      }
+
+      &--left {
+        margin-right: 10px;
+      }
+    }
+
+    &__text-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__name {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold;
+    }
+
+    &__tool {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      line-height: 21px;
+      font-size: 18px;
+    }
+  }
+}
