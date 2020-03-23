@@ -1,28 +1,19 @@
 <nav class="navbar">
-  <ul class="navbar-list">
-    <li class="navbar-list__item">
-      <a
-        routerLink="/"
-        routerLinkActive="navbar-list__item--active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
-        blues drawers
-      </a>
-    </li>
-    <li class="navbar-list__item">
-      <a routerLink="/news" routerLinkActive="navbar-list__item--active"
-        >aktualności
-      </a>
-    </li>
-    <li class="navbar-list__item">
-      <a routerLink="/team" routerLinkActive="navbar-list__item--active"
-        >zespół</a
-      >
-    </li>
-    <li class="navbar-list__item">
-      <a routerLink="/rider" routerLinkActive="navbar-list__item--active"
-        >rider</a
-      >
-    </li>
-  </ul>
+	<a routerLink="/">
+		<img src="assets/images/logo.png" alt="Blues Drawers" class="navbar__logo">
+	</a>
+
+	<ul class="navbar-list">
+		<li class=" navbar-list__item">
+			<a routerLink="/" routerLinkActive="navbar-list__item--active"
+				[routerLinkActiveOptions]="{ exact: true }">aktualności
+			</a>
+		</li>
+		<li class="navbar-list__item">
+			<a routerLink="/team" routerLinkActive="navbar-list__item--active">zespół</a>
+		</li>
+		<li class="navbar-list__item">
+			<a routerLink="/rider" routerLinkActive="navbar-list__item--active">rider</a>
+		</li>
+	</ul>
 </nav>

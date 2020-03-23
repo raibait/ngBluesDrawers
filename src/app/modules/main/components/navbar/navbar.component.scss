@@ -1,26 +1,39 @@
 .navbar {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
-  padding: 0 100px;
+	height: 100%;
+	display: flex;
+	position: relative;
+
+	&__logo {
+		top: 30px;
+		left: 30px;
+		position: relative;
+		width: 300px;
+	}
 
   .navbar-list {
+		flex-grow: 2;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     height: 100%;
     align-items: center;
-    color: white;
+		color: white;
+		margin-right: 100px;
+
+
 
     &__item {
-      text-transform: uppercase;
+			text-transform: uppercase;
+			color: grey;
+			font-weight: bold;
+			text-align: center;
+			padding: 0 40px;
 
       & :hover,
       &--active {
-        font-weight: bold;
+				color: white;
       }
 
-      &--active {
-        font-weight: bold;
-      }
     }
   }
 }
