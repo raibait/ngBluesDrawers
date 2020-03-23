@@ -14,7 +14,7 @@ const routes: Routes = [
       },
       {
         loadChildren: () => import('./modules/history/history.module').then((m) => m.HistoryModule),
-        path: 'history',
+        path: 'news',
       },
       {
         loadChildren: () => import('./modules/team/team.module').then((m) => m.TeamModule),

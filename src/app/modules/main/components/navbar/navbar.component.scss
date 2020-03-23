@@ -1,21 +1,26 @@
 .navbar {
-  padding: 20px 10px;
-  
-    .navbar-list {
-      display: flex;
-      justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  padding: 0 100px;
 
-      &__item {
-        text-transform: uppercase;
+  .navbar-list {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    color: white;
 
-        & :hover,
-        &--active {
-          font-weight: bold;
-        }
-  
-        &--active {
-          font-weight: bold;
-        }
+    &__item {
+      text-transform: uppercase;
+
+      & :hover,
+      &--active {
+        font-weight: bold;
+      }
+
+      &--active {
+        font-weight: bold;
       }
     }
   }
+}
