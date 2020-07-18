@@ -1,24 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FirestoreService } from 'src/app/services/firestore-service/firestore.service';
-import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-concerts',
   templateUrl: './concerts.component.html',
   styleUrls: ['./concerts.component.scss']
 })
-export class ConcertsComponent implements OnInit {
+export class ConcertsComponent {
 
   constructor(public firestoreService: FirestoreService) { }
 
   public concerts$ = this.firestoreService.concerts;
+  public openedCards = [];
 
-  ngOnInit(): void {
-    // this.firestoreService.concerts.pipe(take(1)).subscribe((items) => {
-    //   console.log(items);
-    //   console.log(items[0].image);
-
-    // })
+  isCardOpened(cardIndex: number): boolean {
+    return this.openedCards.includes(cardIndex);
   }
 
+  toggleCard(cardIndex: number): void {
+    const arrayIndex = this.openedCards.findIndex((index) => index === cardIndex);
+    if (arrayIndex > -1) {
+      this.openedCards.splice(arrayIndex, 1);
+    } else {
+      this.openedCards = [...this.openedCards, cardIndex]
+    }
+  }
 }

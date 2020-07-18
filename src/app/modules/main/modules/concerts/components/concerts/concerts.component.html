@@ -1,196 +1,29 @@
 <div class="concert-container">
   <div
-    *ngFor="let concert of concerts$ | async"
+    *ngFor="let concert of concerts$ | async, let i = index"
+    [ngClass]="{'concert--opened': isCardOpened(i)}"
+    (click)="toggleCard(i)"
     class="concert"
   >
-    <h1 class="concert__header">{{concert.name}}</h1>
-    <span class="concert__date">{{concert.date}}</span>
     <div class="concert__data-container">
       <img
         class="concert__image"
         [src]="concert.image"
       >
       <div class="concert__data">
-        <p class="concert__description">{{concert.description}}
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
-          Zapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue
-          NoteZapraszamy na koncert do poznańskiego klubu Blue NoteZapraszamy na koncert do poznańskiego klubu Blue Note
+        <h1 class="concert__header">{{concert.name}}</h1>
+        <p
+          *ngIf="isCardOpened(i)"
+          class="concert__description"
+        >{{concert.description}}
         </p>
-        <span class="concert__fee">{{concert.fee}}</span>
-        <span class="concert__address">{{concert.address}}</span>
+
+        <span class="concert__info">
+          <p>miejsce: <span class="concert__info-value">{{concert.address}}</span> </p>
+          <p>data: <span class="concert__info-value">{{concert.date}}</span> </p>
+          <p *ngIf="isCardOpened(i)">wejście: <span class="concert__info-value">{{concert.fee}}</span> </p>
+        </span>
+
       </div>
     </div>
   </div>
