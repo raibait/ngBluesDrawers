@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirestoreService } from 'src/app/services/firestore-service/firestore.service';
 
 @Component({
   selector: 'app-concerts',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConcertsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public firestoreService: FirestoreService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.firestoreService.concerts.subscribe((items) => {
+      console.log(items);
+    })
   }
 
 }

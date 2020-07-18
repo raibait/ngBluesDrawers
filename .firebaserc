@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bluesdrawers": {
+      "hosting": {
+        "ngBluesDrawers": [
+          "bluesdrawers"
+        ]
+      }
+    }
+  }
+}
