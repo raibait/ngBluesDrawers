@@ -11,8 +11,6 @@ export class MainComponent {
   constructor(private router: Router) { }
 
   isDashboard(): boolean {
-    console.log(this.router.url);
-
     return this.router.url === '/'
   }
 }
