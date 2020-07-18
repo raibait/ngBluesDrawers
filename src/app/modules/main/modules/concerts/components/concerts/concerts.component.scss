@@ -1,0 +1,58 @@
+.concert-container {
+  overflow: scroll;
+  height: calc(100vh - 170px);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.concert {
+  position: relative;
+  width: 1340px;
+  background-color: whitesmoke;
+  padding: 14px 40px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  margin: 10px auto;
+  box-shadow: 0px 5px 14px -4px rgba(0, 0, 0, 0.75);
+
+  &__header {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+
+  &__date {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+  }
+
+  &__data-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__data {
+    position: relative;
+  }
+
+  &__image {
+    object-fit: contain;
+    object-position: 0 0;
+    width: 50%;
+    height: 1250px;
+  }
+
+  &__description {
+    margin-left: 40px;
+  }
+
+  &__fee {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

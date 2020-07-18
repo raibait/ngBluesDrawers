@@ -1,7 +1,8 @@
 export interface Concert {
   name: string;
   description: string;
-  data: string;
+  date: string;
   fee: string;
   image: string;
+  address: string;
 }
