@@ -2,6 +2,8 @@
   overflow: scroll;
   height: calc(100vh - 170px);
 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -15,7 +17,7 @@
   opacity: 0.9;
   margin-bottom: 12px;
   border-radius: 4px;
-  margin: 10px auto;
+  margin: 18px auto;
   box-shadow: 0px 5px 14px -4px rgba(0, 0, 0, 0.75);
   max-height: 156px;
   overflow: hidden;
