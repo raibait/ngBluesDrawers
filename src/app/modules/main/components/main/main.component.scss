@@ -24,4 +24,8 @@ $header-height: 170px;
     rgba(0, 0, 0, 0.8)
   );
   height: calc(100vh - #{$header_height});
+
+  &--no-gradient {
+    background-image: none;
+  }
 }

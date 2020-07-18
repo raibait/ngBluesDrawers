@@ -8,7 +8,7 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        loadChildren: () => import('./modules/concerts/concerts.module').then((m) => m.ConcertsModule),
+        loadChildren: () => import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule),
         path: '',
         pathMatch: 'full',
       },

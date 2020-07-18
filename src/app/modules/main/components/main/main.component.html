@@ -1,6 +1,9 @@
 <div class="main">
   <app-navbar class="navbar"></app-navbar>
-  <div class="content">
+  <div
+    class="content"
+    [ngClass]="{'content--no-gradient': isDashboard()}"
+  >
     <router-outlet></router-outlet>
   </div>
 </div>
